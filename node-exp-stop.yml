@@ -1,0 +1,8 @@
+  
+- name: node start
+  hosts: "djangoServer,elkserver"
+  user: root
+  tasks:
+    - name: kill
+      shell: killall node_exporter
+      ignore_errors: yes
